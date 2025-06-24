@@ -1,0 +1,248 @@
+
+.tabtitle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.myAccountWrapper {
+  margin-top: 60px;
+}
+
+
+.myAccountWrapper {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+}
+
+.formRight {
+  width: 100%;
+}
+
+.formRight input {
+  background-color: unset;
+  border: unset;
+  color: var(--white);
+}
+
+
+
+.formRight input::placeholder {
+  color: var(--white);
+}
+
+.formGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.formGroup .inputBox {
+  position: relative;
+  width: calc(50% - 10px);
+
+}
+
+
+.formGroup input {
+  padding: 14px;
+  padding-left: 60px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.formGroup input:focus-visible {
+  outline: unset;
+}
+
+
+.formGroup .inputBox:first-child::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 3px;
+  background: #3f3f3f;
+  height: 50px;
+  transform: skewX(-40deg);
+}
+
+
+.formGroup .inputBox.active:first-child::after {
+  background: linear-gradient(-190.29deg, #ff00ee94 1.55%, #ff00ee42 98.66%);
+}
+
+.formGroup .inputBox:last-child::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -31px;
+  width: 22px;
+  background: #1b1b1b;
+  height: 23px;
+  transform: skewX(-40deg);
+}
+
+.formGroup .inputBox:first-child input {
+  border-bottom: 2px solid #3F3F3F;
+}
+
+
+.formGroup .inputBox:last-child input {
+  border-top: 2px solid #3F3F3F;
+}
+
+.formGroup .inputBox:first-child::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -20px;
+  width: 50px;
+  background: url(./assets/images/inactive-dot.png);
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.formGroup .inputBox.active:first-child::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -20px;
+  width: 50px;
+  background: url(./assets/images/active-dot.png);
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+
+.formGroup .inputBox:last-child::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -20px;
+  width: 50px;
+  background: url(./assets/images/inactive-dot.png);
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+.formGroup .inputBox.active:last-child::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -20px;
+  width: 50px;
+  background: url(./assets/images/active-dot.png);
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+.formGroup .inputBox.active:first-child .linearBorder {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-190.29deg, #ff00ee94 1.55%, #ff00ee42 98.66%);
+  width: calc(100% - 23px);
+  height: 2px;
+}
+
+.formGroup .inputBox.active:last-child .linearBorder {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-190.29deg, #ff00ee94 1.55%, #ff00ee42 98.66%);
+  width: 100%;
+  height: 2px;
+}
+
+
+.formRight .formBtn.skewButton {
+  transform: perspective(100px) rotateY(-10deg) rotateX(-5deg) skewX(-12deg);
+  right: auto;
+  left: -20px;
+  max-width: 150px;
+  height: 50px;
+  padding: 2px;
+}
+
+
+.formRight .formBtn.skewButton span {
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+span.leftCorner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+span.rightCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+span.rightBottomCorner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+span.leftBottomCorner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+@media(max-width: 575px){
+  
+  .formGroup .inputBox:last-child::after {
+    bottom: -8px;
+    left: -20px;
+    background-position: bottom left !important;
+    top: auto !important;
+  }
+
+  .formGroup {
+    flex-direction: column;
+  }
+
+  .formGroup .inputBox {
+    width: 100%;
+  }
+
+  .formGroup .inputBox:first-child::after {
+    display: none;
+  }
+
+  .formGroup .inputBox:last-child input {
+    border-bottom: 2px solid #3F3F3F;
+    border-top: unset;
+  }
+
+  .formGroup .inputBox.active:last-child .linearBorder {
+    top: auto;
+    bottom: 0;
+  }
+
+  .formGroup .inputBox:last-child::before {
+    display: none;
+  }
+
+  .formGroup input {
+    padding-left: 20px;
+  }
+}

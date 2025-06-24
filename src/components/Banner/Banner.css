@@ -1,0 +1,320 @@
+.bannerMain {
+    display: flex;
+    align-items: center;
+    padding: 150px 0 0;
+    margin-bottom: -1px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 850px;
+    background: url('../../assets/images/bannerBg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bannerMain>.container-fluid {
+    padding: 0 140px;
+}
+.bannerMain::after {
+    content: "";
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, rgba(14, 14, 14, 1) 100%);
+    position: absolute;
+    width: 100%;
+    height: 175px;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+}
+.winBig {
+    animation: glowUpY 1.6s ease-in-out infinite alternate;
+}
+
+.gameMc {
+    animation: glowUp 1.6s ease-in-out infinite alternate;
+    z-index: 9;
+}
+.gameMc::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 60%;
+    border-radius: 50%;
+    background: #27a5f2;
+    box-shadow: 0px 0px 80px 70px #27a5f2;
+    z-index: -1;
+    animation: fadeUp 1.6s ease-in-out infinite alternate;
+}
+.gameMc::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 32%;
+    height: 60%;
+    border-radius: 50%;
+    background: #ff21c0;
+    box-shadow: 0px 0px 100px 100px #ff21c0;
+    z-index: -1;
+    animation: fadeUp 1.6s ease-in-out infinite alternate;
+}
+.Coin1 {
+    position: absolute;
+    top: -45px;
+    left: 30px;
+    animation: coin1 1.6s ease-in-out infinite alternate;
+}
+.Coin2 {
+    position: absolute;
+    right: 0px;
+    top: -60px;
+    animation: coin2 1.6s ease-in-out infinite alternate;
+}
+.Coin3 {
+    position: absolute;
+    left: -100px;
+    top: auto;
+    bottom: 60px;
+    filter: blur(2px);
+    animation: coin3 1.6s ease-in-out infinite alternate;
+}
+.Coin4 {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    bottom: 60px;
+    filter: blur(2px);
+    animation: coin4 1.6s ease-in-out infinite alternate;
+}
+.Coin5 {
+    position: absolute;
+    left: 115px;
+    top: 210px;
+    transform: translateY(-50%);
+    bottom: 60px;
+    animation: coin5 1.6s ease-in-out infinite alternate;
+}
+
+
+@keyframes coin1 {
+    0% {
+        transform: translateY(0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(30px) rotate(-12deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin2 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(-50px, 40px) rotate(-12deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin3 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(20px, 0) rotate(20deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin4 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(5px, -20px) rotate(20deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin5 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(20px, 40px) rotate(45deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes glowUpY {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(-30px) scale(0.99, 0.99);
+    }
+}
+
+@keyframes glowUp {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1.1, 1.1);
+    }
+}
+@keyframes fadeUp {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 1600px) {
+    .bannerMain .container-fluid {
+        padding: 0 60px;
+    }
+
+    .Coin3 {
+        max-width: 80px;
+    }
+
+    .Coin1 {
+        max-width: 80px;
+    }
+
+    .Coin2 {
+        max-width: 60px;
+    }
+
+    .Coin4 {
+        max-width: 60px;
+        right: -6%;
+    }
+
+    .Coin5 {
+        left: 0;
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+    .Coin2 {
+        max-width: 60px;
+    }
+
+    .Coin4 {
+        max-width: 60px;
+        right: -6%;
+    }
+
+    .Coin5 {
+        left: 0;
+    }
+
+    .winBigBtnWrapper .skewBtn {
+        max-width: 160px;
+        width: 100%;
+        bottom: 40px;
+        height: 48px;
+        transform: perspective(90px) rotateY(10deg) rotateX(5deg) skewX(10deg);
+        padding: 2px;
+    }
+
+    .Coin2 {
+        max-width: 60px;
+    }
+
+    .Coin4 {
+        max-width: 60px;
+        right: -6%;
+    }
+
+    .Coin5 {
+        left: 0;
+    }
+
+    .bannerMain {
+        padding: 40px 0 0;
+    }
+
+    .gameMc {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .bannerMain {
+        min-height: 800px;
+    }
+
+    .bannerRight {
+        max-width: 480px;
+        margin: auto;
+    }
+    .winBigBtnWrapper .skewBtn:hover {
+        box-shadow: -8px 8px rgba(0 0 0 / 55%);
+    }
+
+}
+
+@media (max-width: 767px) {
+    .Coin3 {
+        left: -50px;
+    }
+    .Coin5 {
+        top: 150px;
+    }
+ 
+    .bannerMain .container-fluid {
+        padding: 0 15px;
+    }
+  
+    .bannerRight {
+        max-width: 290px;
+    }
+    .Coin1 {
+        max-width: 40px;
+        top: 0;
+    }
+    
+    .Coin2 {
+        max-width: 30px;
+        top: 0;
+    }
+    
+    .Coin4 {
+        top: 115px;
+        right: -10px;
+        max-width: 40px;
+        filter: blur(0);
+    }
+    
+    img.Coin3.img-fluid {
+        max-width: 40px;
+        top: 88px;
+        left: 0;
+        filter: url();
+    }
+    .winBigBtnWrapper .skewBtn {
+        right: 0;
+    }
+    .bannerMain {
+        min-height: 780px;
+    }
+ 
+}
+
+
+

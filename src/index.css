@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Condiment&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global CSS Starts */
+
+:root {
+  --white: #ffffff;
+  --pink: #FF00EE;
+  --black: #000000;
+  --bg-black: #0E0E0E;
+  --purple-light: #AA77A8;
+  --green: #004A42;
+  --telegram: #039BE5;
+  --discord: #5046AF;
+  --twitter: #03A9F4;
+  --instagram: linear-gradient(135deg, rgba(250, 225, 0, 1) 0%, rgba(252, 183, 32, 1) 15%, rgba(255, 121, 80, 1) 30%, rgba(255, 121, 80, 1) 50%, rgba(108, 28, 209, 1) 100%);
+  --youtube: #FF0000;
+  --darkGray: #6D6D6D;
+  --ddBg: #1B1B1B;
+  --footerBg: #291928;
+  --darkPink-txt: #4B024A;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+    background-color: #0e0e0e;
+}
+
+.font-ceviche {
+  font-family: "Ceviche One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-condiment {
+  font-family: "Condiment", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.customContainer {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Global CSS End */
+
+

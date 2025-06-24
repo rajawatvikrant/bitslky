@@ -1,0 +1,74 @@
+.playOffRightImg{
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+    width: 50%;
+    height: calc(100% + 40px);
+    object-fit: contain;
+    transform: rotate(3deg);
+}
+
+.playOffBtn {
+    position: absolute;
+    bottom: 0;
+    left: 4em;
+    width: fit-content;
+}
+
+
+@media (max-width: 1399px) {
+    .playOffBtn .playOffBtnImg {
+        max-width: 400px;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .playOffBtn .playOffBtnImg {
+        max-width: 280px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    img.playOffBgImg.img-fluid {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .playOffRightImg {
+        bottom: 0;
+        height: calc(100% - 36px);
+    }
+    .playOffWrapper{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .playOffBtn .playOffBtnImg {
+        max-width: 200px;
+    }
+    .playOffBtn {
+        left: 1em;
+    }
+    img.playOffBgImg.img-fluid {
+        height: 200px;
+    }
+    .playOffRightImg {
+        height: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 575px) {
+    .playOffBtn{
+        position: static;
+        margin: 0 auto;
+    }
+    .playOffBtn .playOffBtnImg {
+        max-width: 100%;
+    }
+    .playOffRightImg, .playOffBgImg {
+        display: none;
+    }
+}

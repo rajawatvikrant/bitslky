@@ -1,0 +1,36 @@
+.gamesWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.titleWrapper h2 {
+    font-size: 50px;
+    line-height: 1;
+    padding: 0 44px;
+    display: inline-block;
+}
+
+.titleWrapper::before,
+.titleWrapper::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    background-color: #494949;
+    z-index: -1;
+}
+.titleWrapper::after {
+    right: 0;
+    left: auto;
+}
+
+
+@media (max-width: 767px) {
+    .titleWrapper h2 {
+        font-size: 32px;
+        padding: 0 24px;
+    }
+}

@@ -1,0 +1,56 @@
+.scrolling-text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.scrolling-text {
+    font-size: 36px;
+    color: var(--white);
+}
+
+.scrolling-text span {
+    color: var(--pink);
+}
+
+.scrollingTextMain .rfm-child {
+    width: 100%;
+}
+
+
+.scrollingTextMain .rfm-initial-child-container {
+    width: 100%;
+}
+
+.downloadGif {
+    top: 50%;
+    left: 50%;
+    max-width: 390px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #0e0e0e;
+    box-shadow: 0px 0px 20px 20px #0e0e0e;
+    z-index: 1;
+}
+
+.scrollingTextMain {
+    background-color: #0e0e0e;
+}
+
+.downloadGif img {
+    width: 85px;
+    height: 85px;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.scrollingTextMain .rfm-marquee {
+    justify-content: space-evenly;
+}
+
+@media (max-width: 767px) {
+    .downloadGif {
+        max-width: 110px;
+    }
+}

@@ -1,0 +1,146 @@
+.socialMedia {
+    margin-bottom: 120px;
+}
+
+.socialMedia_wrapper {
+    background: url("../../assets/images/socialMediaBg.png") no-repeat center center / contain;
+    min-height: 320px;
+    position: relative;
+}
+
+.socialMedia_title {
+    position: absolute;
+    left: -16px;
+    top: 13px;
+    max-width: 375px;
+}
+
+.socialMedia_content {
+    padding: 60px 90px 50px 75px;
+}
+
+.socialMedia_content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 63px;
+    min-width: 360px;
+}
+
+.socialMedia_linksMain {
+    width: calc(100% - 360px);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.socialMedia_linkBox {
+    background-color: rgba(255, 255, 255, 0.3);
+    min-height: 90px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: calc(33.33% - 20px);
+    padding: 12px 20px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.socialMedia_linkBox:hover {
+    box-shadow: 0 0 20px 0 rgba(132, 141, 10, 0.5), rgba(132, 141, 10, 0.5) 0px 0px 8px 0 inset;
+}
+
+.socialMedia_linkBox h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+
+@media (max-width: 1600px) {
+   .socialMedia_linkBox {
+        min-height: 80px;
+    }
+
+    .socialMedia_linkBox h4 {
+        font-size: 20px;
+    }
+
+    .socialMedia_linkBox img {
+        max-width: 48px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .socialMedia_title {
+        left: -5px;
+        top: 35px;
+        max-width: 310px;
+    }
+    .socialMedia_content {
+        padding: 75px 90px 30px 75px;
+    }
+    .socialMedia_linkBox {
+        min-height: 60px;
+    }
+    .socialMedia_content h2 {
+        font-size: 28px;
+        padding-top: 60px;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .socialMedia_title {
+        min-width: unset;
+        max-width: 300px;
+        position: static;
+        margin: 0 auto;
+    }
+    .socialMedia_wrapper {
+        background: url("/src/assets/images/socialMediaBg.png") no-repeat center center / cover;
+        min-height: 460px;
+    }
+    .socialMedia_content {
+        position: relative;
+        padding: 15px;
+        flex-direction: column;
+    }
+    .socialMedia_content h2 {
+        padding: 1rem 0 2.5rem;
+        text-align: center;
+    }
+
+    .socialMedia_linksMain {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .socialMedia_linkBox {
+        width: calc(50% - 20px);
+        min-height: 60px;
+    }
+    .socialMedia_wrapper {
+        min-height: unset;
+        background-position: 83%;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .socialMedia_linkBox {
+        width: 100%;
+        min-height: 60px;
+    }    
+    .socialMedia_content h2 {
+        font-size: 28px;
+        width: 100%;
+        min-width: unset;
+    }
+}
